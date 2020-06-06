@@ -299,9 +299,7 @@ If FILE is not specified, use the current buffer's file-path."
                      (buffer-file-name))))
       (save-match-data
         (and
-         (org-roam--org-file-p path)
-         (f-descendant-of-p (file-truename path)
-                            (file-truename org-roam-directory))))))
+         (org-roam--org-file-p path)))))
 
 (defun org-roam--shell-command-files (cmd)
   "Run CMD in the shell and return a list of files. If no files are found, an empty list is returned."
